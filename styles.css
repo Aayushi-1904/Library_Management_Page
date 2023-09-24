@@ -1,0 +1,304 @@
+/* Reset some default styles */
+
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap'); */
+body, h1, h2, h3, p, ul, li, button {
+    margin: 0;
+    padding: 0;
+    border: none;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* Set a background color and default font for the page */
+body {
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+}
+
+.start_button {
+
+    border-radius: 3px;
+    padding: 10px;
+    font-size: bold;
+    background: white;
+    color:black;
+    font-weight: bold;
+    font:Ariel, sans-serif;
+}
+
+
+
+/* Header styles */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #007bff;
+    color: #fff;
+    padding: 0.5rem; /* Adjust the padding as needed */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px; /* Set a reduced header height */
+}
+
+#cart-container {
+    text-align: right;
+    margin-right: 1rem;
+}
+
+#cart {
+    color: #000;
+    font-weight: bold;
+}
+
+/* Main content styles */
+main {
+    padding: 2rem;
+}
+
+/* Book listing styles */
+#book-list {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem; 
+    margin-top: 2.5rem;
+}
+
+#book-list h2 {
+    font-size: 18px;
+    margin-bottom: 1rem;
+}
+
+ul#book-list-ul {
+    list-style: none;
+}
+
+ul#book-list-ul li {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+ul#book-list-ul li h3 {
+    font-size: 20px;
+    margin-bottom: 0.5rem;
+}
+
+/* Load more button styles */
+#load-more-button {
+    display: block;
+    margin: 0 auto;
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#load-more-button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Cart styles (positioned at top right) */
+#cart-container {
+    text-align: right;
+    margin-right: 2rem;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #cart-container {
+        margin-top: 1rem;
+        margin-right: 0;
+    }
+}
+
+/* Search bar styles */
+#search-bar-container {
+    text-align: right;
+    margin-right: 2rem;
+    position: relative;
+}
+
+#search-bar {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 300px;
+    color: black;
+}
+
+#search-suggestions {
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    color:blue;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    max-height: 150px;
+    overflow-y: auto;
+    display: none;
+}
+
+#search-suggestions li {
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+#search-suggestions li:hover {
+    background-color: #f5f5f5;
+}
+/* styles.css */
+
+/* ... Your existing styles ... */
+
+/* Styling for the sorting container */
+#sort-container {
+    text-align: right;
+    margin-top: 1rem; /* Add padding from margin top */
+    position: relative;
+}
+
+/* Styling for the sorting button */
+#sort-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Styling for the sorting options */
+#sort-options {
+    display: none;
+    position: absolute;
+    top: 100%; /* Position below the button */
+    right: 0; /* Align with the right edge of the button */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    max-height: 150px;
+    overflow-y: auto;
+    z-index: 1;
+}
+
+.sort-option {
+    display: block;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.sort-option:hover {
+    background-color: #f5f5f5;
+}
+
+
+/* .search-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+  }
+  
+  input {
+    font-size: 1rem;
+  }
+  
+  .user-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: .25rem;
+    margin-top: 1rem;
+  }
+  
+  .card {
+    border: 1px solid black;
+    background-color: white;
+    padding: .5rem;
+  }
+  
+  .card > .header {
+    margin-bottom: .25rem;
+  }
+  
+  .card > .body {
+    font-size: .8rem;
+    color: #777;
+  }
+  
+  .hide {
+    display: none;
+  } */
+
+/* 
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --linear-grad: linear-gradient(to right, #141E30, #243B55);
+    --grad-clr1: #141E30;
+    --grad-clr2: #243B55;
+}
+
+body {
+    height: 100vh;
+    background: #f6f5f7;
+    display: grid;
+    place-content: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+footer {
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+}
+footer mark {
+    padding: 8px 30px;
+    border-radius: 7px;
+}
+footer a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #003;
+} */
